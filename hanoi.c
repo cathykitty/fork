@@ -16,8 +16,8 @@ int main(void){
 		if(pids<0){
 			return -1;
 		}else if(pids==0){
-			printf("Child ID:%d\n",getpid());
-			printf("Child\n");
+			// printf("Child ID:%d\n",getpid());
+			// printf("Child\n");
 			movehanoi(num,'A','B','C');
 			return 0;
 		}else{
@@ -29,7 +29,7 @@ int main(void){
 	return 0;
 }
 void outputmove(int num,char from,char to){
-printf("%d번째 원판이 %c에서 %c로 이동\n",num,from,to);
+printf("%d : %dth floor moves from %c to %c.\n", getpid(),num,from,to);
 }
 
 void movehanoi(int num,char from,char temp,char to){
